@@ -3,197 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rakshit Karoshi — Electronics and Communication Engineering graduate-in-progress focused on embedded systems, IoT, and electronics.">
+  <meta name="description" content="Rakshit Karoshi | Electronics, Embedded Systems and IoT Portfolio">
   <meta name="theme-color" content="#f5f7fa">
-  <title>Rakshit Karoshi | Electronics & Embedded Systems</title>
-
+  <title>Rakshit Karoshi | Embedded Systems & IoT</title>
   <style>
     :root {
       --bg: #f5f7fa;
       --surface: #ffffff;
-      --surface-soft: #f0f4f8;
-      --text: #1f2937;
+      --soft: #edf3f7;
+      --text: #263445;
       --muted: #64748b;
       --heading: #14243a;
       --accent: #176b87;
       --accent-dark: #10536b;
       --border: #dce4ec;
-      --shadow: 0 8px 24px rgba(20, 36, 58, 0.06);
+      --shadow: 0 6px 20px rgba(20, 36, 58, .06);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.65;
     }
-
     a { color: var(--accent); }
     a:hover { color: var(--accent-dark); }
-
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 15px max(6%, calc((100% - 1100px) / 2));
-      background: rgba(255,255,255,.96);
+      position: sticky; top: 0; z-index: 10;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; padding: 14px max(5%, calc((100% - 1100px) / 2));
+      background: rgba(255,255,255,.97);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(10px);
     }
-    .logo { color: var(--heading); font-weight: 750; font-size: 18px; }
-    nav .links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .logo { color: var(--heading); font-size: 19px; font-weight: 700; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 18px; }
     nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
     nav a:hover { color: var(--accent); }
-
     header {
-      padding: 88px 6% 82px;
-      text-align: center;
-      background: linear-gradient(135deg, #edf3f7, #ffffff);
+      padding: 78px 6%; text-align: center;
+      background: linear-gradient(135deg, #eaf2f7, #ffffff);
       border-bottom: 1px solid var(--border);
     }
     .eyebrow {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-weight: 750;
-      margin-bottom: 12px;
+      color: var(--accent); text-transform: uppercase;
+      letter-spacing: 2px; font-size: 12px; font-weight: 700; margin-bottom: 12px;
     }
-    header h1 {
-      color: var(--heading);
-      font-size: clamp(36px, 6vw, 58px);
-      line-height: 1.15;
-      margin-bottom: 12px;
-    }
-    header h2 {
-      color: #42546a;
-      font-size: clamp(17px, 3vw, 23px);
-      font-weight: 500;
-      margin-bottom: 16px;
-    }
-    header p { max-width: 720px; margin: 0 auto 24px; color: var(--muted); }
+    header h1 { color: var(--heading); font-size: clamp(36px, 6vw, 56px); line-height: 1.15; margin-bottom: 12px; }
+    header h2 { color: #42546a; font-size: clamp(17px, 3vw, 22px); font-weight: 500; margin-bottom: 14px; }
+    header p { max-width: 720px; margin: 0 auto 22px; color: var(--muted); }
     .button {
-      display: inline-block;
-      padding: 10px 19px;
-      margin: 5px;
-      border: 1px solid var(--accent);
-      border-radius: 7px;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 650;
-      font-size: 14px;
-      transition: .2s ease;
+      display: inline-block; padding: 10px 19px; margin: 5px;
+      border: 1px solid var(--accent); border-radius: 7px;
+      background: var(--accent); color: #fff; text-decoration: none;
+      font-size: 14px; font-weight: 700;
     }
     .button:hover { background: var(--accent-dark); color: #fff; }
     .button.secondary { background: transparent; color: var(--accent); }
-    .button.secondary:hover { background: #e8f1f5; }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 58px 25px;
-      scroll-margin-top: 75px;
-    }
-    section h2 {
-      color: var(--heading);
-      font-size: 27px;
-      margin-bottom: 22px;
-      letter-spacing: -.3px;
-    }
+    .button.secondary:hover { background: var(--soft); }
+    section { max-width: 1100px; margin: auto; padding: 52px 24px; scroll-margin-top: 75px; }
+    section h2 { color: var(--heading); font-size: 27px; margin-bottom: 22px; }
     section h2::after {
-      content: "";
-      display: block;
-      width: 44px;
-      height: 3px;
-      margin-top: 9px;
-      background: var(--accent);
-      border-radius: 3px;
+      content: ""; display: block; width: 43px; height: 3px;
+      margin-top: 8px; background: var(--accent); border-radius: 3px;
     }
     .muted { color: var(--muted); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-      gap: 18px;
-    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
     .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 11px;
-      padding: 22px;
-      box-shadow: var(--shadow);
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 11px; padding: 21px; box-shadow: var(--shadow);
     }
-    .card h3 { color: var(--heading); font-size: 18px; margin-bottom: 9px; }
+    .card h3 { color: var(--heading); font-size: 18px; margin-bottom: 8px; }
     .card p { margin-bottom: 8px; }
     .tag {
-      display: inline-block;
-      padding: 4px 9px;
-      margin: 4px 4px 0 0;
-      border-radius: 5px;
-      background: #eaf2f6;
-      color: #24566b;
-      font-size: 12px;
-      font-weight: 600;
+      display: inline-block; padding: 4px 9px; margin: 4px 4px 0 0;
+      border-radius: 5px; background: #eaf2f6; color: #24566b;
+      font-size: 12px; font-weight: 600;
     }
-
     .project-card { display: flex; flex-direction: column; }
-    .project-card .project-link { margin-top: auto; padding-top: 12px; font-weight: 650; font-size: 14px; }
+    /* Add your project photos to the assets folder and update the image paths below. */
+    .project-image {
+      width: 100%; height: 215px; object-fit: cover;
+      display: block; border-radius: 8px; margin-bottom: 16px;
+      border: 1px solid var(--border); background: var(--soft);
+    }
+    .image-placeholder {
+      height: 215px; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 20px; margin-bottom: 16px;
+      border: 1px dashed #9aafbf; border-radius: 8px;
+      background: var(--soft); color: var(--muted); font-size: 14px;
+    }
     .project-card ul, .experience ul { padding-left: 19px; margin: 8px 0 12px; }
     .project-card li, .experience li { margin-bottom: 4px; }
-
+    .project-link { margin-top: auto; padding-top: 12px; font-weight: 700; font-size: 14px; }
     .timeline { border-left: 2px solid #b9ced9; margin-left: 8px; padding-left: 23px; }
-    .experience { position: relative; margin-bottom: 28px; }
+    .experience { position: relative; margin-bottom: 26px; }
+    .experience:last-child { margin-bottom: 0; }
     .experience::before {
-      content: "";
-      position: absolute;
-      left: -31px;
-      top: 8px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid var(--bg);
+      content: ""; position: absolute; left: -31px; top: 8px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent); border: 3px solid var(--bg);
     }
     .date { color: var(--muted); font-size: 14px; font-weight: 600; margin-bottom: 7px; }
-
-    .education-item { margin-bottom: 14px; }
-    .education-item:last-child { margin-bottom: 0; }
     .education-item h3 { margin-bottom: 3px; }
-
-    .contact-card { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .contact-item { background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 16px; }
+    .education-item + hr { border: 0; border-top: 1px solid var(--border); margin: 15px 0; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .contact-item { background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 15px; }
     .contact-item strong { display: block; color: var(--heading); margin-bottom: 4px; }
     .contact-item a { overflow-wrap: anywhere; }
-
-    footer {
-      text-align: center;
-      padding: 25px 15px;
-      background: #eaf0f4;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      font-size: 14px;
-    }
-
-    @media (max-width: 650px) {
-      nav { justify-content: center; flex-direction: column; padding: 13px 5%; }
-      nav .links { justify-content: center; gap: 10px 16px; }
-      header { padding: 65px 6%; }
-      section { padding: 43px 20px; }
+    footer { text-align: center; padding: 24px 15px; background: #eaf0f4; color: var(--muted); border-top: 1px solid var(--border); font-size: 14px; }
+    @media (max-width: 680px) {
+      nav { flex-direction: column; justify-content: center; }
+      .nav-links { justify-content: center; gap: 9px 15px; }
+      header { padding: 58px 6%; }
+      section { padding: 40px 19px; }
+      .project-image, .image-placeholder { height: 190px; }
     }
   </style>
 </head>
-
 <body>
   <nav>
     <div class="logo">Rakshit Karoshi</div>
-    <div class="links">
+    <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -212,7 +143,7 @@
       microcontrollers, sensor interfacing, and practical hardware-software integration.
     </p>
     <a class="button" href="#projects">View Projects</a>
-    <a class="button secondary" href="#contact">Get in Touch</a>
+    <a class="button secondary" href="Rakshit-Karoshi-Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
   </header>
 
   <main>
@@ -225,9 +156,9 @@
         in embedded applications, IoT monitoring, medical-device systems, hardware
         testing, debugging, and firmware validation.
       </p>
-      <p class="muted" style="margin-top: 13px;">
-        I enjoy working with microcontrollers and sensors to build useful, reliable
-        electronic systems that connect hardware with software.
+      <p class="muted" style="margin-top: 12px;">
+        I enjoy working with microcontrollers and sensors to build useful electronic
+        systems that connect hardware with software.
       </p>
     </section>
 
@@ -236,31 +167,21 @@
       <div class="grid">
         <div class="card">
           <h3>Programming</h3>
-          <span class="tag">C</span>
-          <span class="tag">C++</span>
-          <span class="tag">Python</span>
-          <span class="tag">Embedded C</span>
+          <span class="tag">C</span><span class="tag">C++</span><span class="tag">Python</span><span class="tag">Embedded C</span>
         </div>
         <div class="card">
           <h3>Embedded Systems</h3>
-          <span class="tag">Arduino Uno</span>
-          <span class="tag">NodeMCU ESP8266</span>
-          <span class="tag">8051</span>
-          <span class="tag">Sensor Interfacing</span>
-          <span class="tag">IoT</span>
+          <span class="tag">Arduino Uno</span><span class="tag">NodeMCU ESP8266</span>
+          <span class="tag">8051</span><span class="tag">Sensor Interfacing</span><span class="tag">IoT</span>
         </div>
         <div class="card">
           <h3>Engineering Tools</h3>
-          <span class="tag">Keil</span>
-          <span class="tag">Proteus</span>
-          <span class="tag">MATLAB</span>
+          <span class="tag">Keil</span><span class="tag">Proteus</span><span class="tag">MATLAB</span>
         </div>
         <div class="card">
           <h3>Hardware</h3>
-          <span class="tag">Digital Electronics</span>
-          <span class="tag">Analog Electronics</span>
-          <span class="tag">PCB Basics</span>
-          <span class="tag">Sensor Interfacing Basics</span>
+          <span class="tag">Digital Electronics</span><span class="tag">Analog Electronics</span>
+          <span class="tag">PCB Basics</span><span class="tag">Sensor Interfacing Basics</span>
         </div>
       </div>
     </section>
@@ -269,6 +190,13 @@
       <h2>Projects</h2>
       <div class="grid">
         <article class="card project-card">
+          <!-- IMAGE 1: Save your Smart Seed Preservation System photo as
+               assets/smart-seed-preservation.jpg, or change the path below. -->
+          <img class="project-image" src="assets/Project-Photo2.png"
+               alt="Smart Seed Preservation System project"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="image-placeholder" style="display:none;">
+          </div>
           <h3>Smart Seed Preservation System</h3>
           <p class="muted"><strong>Components:</strong> Arduino, DHT11, Soil Moisture Sensor, Relay</p>
           <ul>
@@ -280,27 +208,17 @@
             <span class="tag">Arduino</span><span class="tag">DHT11</span>
             <span class="tag">Sensors</span><span class="tag">Embedded Systems</span>
           </div>
-          <!-- Replace # with this project's GitHub repository URL. -->
-          <p class="project-link"><a href="#" target="_blank" rel="noopener noreferrer">Add GitHub repository link</a></p>
+          <p class="project-link"><a href="#" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
         </article>
 
         <article class="card project-card">
-          <h3>Solar Drying Process for Agriculture and Food Machinery</h3>
-          <p class="muted"><strong>Domain:</strong> Solar Energy, Thermal Storage, Agricultural Food Preservation</p>
-          <ul>
-            <li>Contributed to a solar-based agricultural drying project during OJT at Saburi Scientific, Goa.</li>
-            <li>Gained practical exposure to solar energy collection, thermal energy storage, and forced-air drying.</li>
-            <li>Supported installation, equipment integration, and experimental testing, including weight-based moisture-loss monitoring.</li>
-          </ul>
-          <div>
-            <span class="tag">Solar Energy</span><span class="tag">Thermal Storage</span>
-            <span class="tag">Agricultural Technology</span>
+          <!-- IMAGE 2: Save your Obstacle Avoiding Car photo as
+               assets/obstacle-avoiding-car.jpg, or change the path below. -->
+          <img class="project-image" src="assets/Obstacle-Car.jpeg"
+               alt="Obstacle Avoiding Car project"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="image-placeholder" style="display:none;">
           </div>
-          <!-- Replace # with this project's GitHub repository URL, if available. -->
-          <p class="project-link"><a href="#" target="_blank" rel="noopener noreferrer">Add GitHub repository link</a></p>
-        </article>
-
-        <article class="card project-card">
           <h3>Obstacle Avoiding Car</h3>
           <p class="muted"><strong>Components:</strong> Arduino, HC-SR04, L298N</p>
           <ul>
@@ -312,8 +230,25 @@
             <span class="tag">Arduino</span><span class="tag">HC-SR04</span>
             <span class="tag">L298N</span><span class="tag">Motor Control</span>
           </div>
-          <!-- Replace # with this project's GitHub repository URL. -->
-          <p class="project-link"><a href="#" target="_blank" rel="noopener noreferrer">Add GitHub repository link</a></p>
+          <p class="project-link"><a href="#" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+        </article>
+
+        <article class="card project-card">
+          <div class="image-placeholder" style="height:150px;">
+            Solar energy and agricultural drying project
+          </div>
+          <h3>Solar Drying Process for Agriculture and Food Machinery</h3>
+          <p class="muted"><strong>Domain:</strong> Solar Energy, Thermal Storage, Agricultural Food Preservation</p>
+          <ul>
+            <li>Contributed to a solar-based agricultural drying project during OJT at Saburi Scientific, Goa.</li>
+            <li>Gained practical exposure to solar energy collection, thermal energy storage, and forced-air drying.</li>
+            <li>Supported installation, equipment integration, and experimental testing, including weight-based moisture-loss monitoring.</li>
+          </ul>
+          <div>
+            <span class="tag">Solar Energy</span><span class="tag">Thermal Storage</span>
+            <span class="tag">Agricultural Technology</span>
+          </div>
+          <p class="project-link"><a href="#" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
         </article>
       </div>
     </section>
@@ -322,16 +257,6 @@
       <h2>Internship Experience</h2>
       <div class="timeline">
         <div class="experience">
-          <h3>Embedded Systems &amp; IoT in Medical Devices Intern</h3>
-          <p class="date">Saburi Scientific, Goa | Mar 2024 – Jun 2024</p>
-          <ul>
-            <li>Assisted in embedded firmware development for healthcare devices.</li>
-            <li>Integrated sensors and IoT modules for medical applications.</li>
-            <li>Conducted testing, troubleshooting, and documentation.</li>
-            <li>Supported hardware integration and validation.</li>
-          </ul>
-        </div>
-        <div class="experience">
           <h3>Embedded Systems &amp; IoT Intern</h3>
           <p class="date">Uilatech, Belagavi | Jun 2023 – Aug 2023</p>
           <ul>
@@ -339,6 +264,16 @@
             <li>Integrated sensors for IoT-based monitoring.</li>
             <li>Performed hardware testing, debugging, and firmware validation.</li>
             <li>Collaborated with engineers to deliver embedded solutions.</li>
+          </ul>
+        </div>
+        <div class="experience">
+          <h3>Embedded Systems &amp; IoT in Medical Devices Intern</h3>
+          <p class="date">Saburi Scientific, Goa | Mar 2024 – Jun 2024</p>
+          <ul>
+            <li>Assisted in embedded firmware development for healthcare devices.</li>
+            <li>Integrated sensors and IoT modules for medical applications.</li>
+            <li>Conducted testing, troubleshooting, and documentation.</li>
+            <li>Supported hardware integration and validation.</li>
           </ul>
         </div>
       </div>
@@ -352,13 +287,13 @@
           <p>S.G. Balekundri Institute of Technology, Belagavi</p>
           <p class="muted">Expected July 2027 | CGPA: 7.4/10 (through 6th semester)</p>
         </div>
-        <hr style="border:0;border-top:1px solid var(--border);margin:16px 0;">
+        <hr>
         <div class="education-item">
           <h3>Diploma in Electronics and Communication Engineering</h3>
           <p>R.N. Shetty Polytechnic, Belagavi</p>
           <p class="muted">August 2021 – June 2024 | CGPA: 9.20/10</p>
         </div>
-        <hr style="border:0;border-top:1px solid var(--border);margin:16px 0;">
+        <hr>
         <div class="education-item">
           <h3>Secondary School (SSLC)</h3>
           <p>Little Scholar’s Academy, Belagavi</p>
@@ -390,39 +325,20 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p class="muted" style="margin-bottom:18px;">
-        I am interested in opportunities related to embedded systems, IoT,
-        and electronics engineering.
+      <p class="muted" style="margin-bottom: 18px;">
+        I am interested in opportunities related to embedded systems, IoT, and electronics engineering.
       </p>
-      <div class="contact-card">
-        <div class="contact-item">
-          <strong>Email</strong>
-          <a href="mailto:karoshirakshit@gmail.com">karoshirakshit@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <strong>Phone</strong>
-          <a href="tel:+919844940689">+91 9844940689</a>
-        </div>
-        <div class="contact-item">
-          <strong>LinkedIn</strong>
-          <!-- Replace # with the LinkedIn profile URL. -->
-          <a href="https://www.linkedin.com/in/rakshit-karoshi/" target="_blank" rel="noopener noreferrer">Add LinkedIn profile URL</a>
-        </div>
-        <div class="contact-item">
-          <strong>GitHub</strong>
-          <!-- Replace # with the GitHub profile URL. -->
-          <a href="https://github.com/rakshitkaroshi" target="_blank" rel="noopener noreferrer">Add GitHub profile URL</a>
-        </div>
+      <div class="contact-grid">
+        <div class="contact-item"><strong>Email</strong><a href="mailto:karoshirakshit@gmail.com">karoshirakshit@gmail.com</a></div>
+        <div class="contact-item"><strong>Phone</strong><a href="tel:+919844940689">+91 9844940689</a></div>
+        <div class="contact-item"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/rakshit-karoshi/" target="_blank" rel="noopener noreferrer"></a></div>
+        <div class="contact-item"><strong>GitHub</strong><a href="https://github.com/rakshitkaroshi" target="_blank" rel="noopener noreferrer"></a></div>
       </div>
-      <p style="margin-top:20px;">
-        <!-- Upload the resume PDF to your GitHub repository and update this path. -->
-        <a class="button" href="Rakshit_resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
-      </p>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Rakshit Karoshi | Electronics &amp; Embedded Systems</p>
+    <p>© 2026 Rakshit Karoshi | Electronics &amp; Embedded Systems Portfolio</p>
   </footer>
 </body>
 </html>
